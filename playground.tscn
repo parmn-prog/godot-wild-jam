@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cijlrjlc6jnrm" path="res://starmap_2020_4k.exr" id="1_rupst"]
 [ext_resource type="Shader" uid="uid://yu6jb36coesw" path="res://skyshader.gdshader" id="1_wt17y"]
 [ext_resource type="Texture2D" uid="uid://dmf736xqp1dwq" path="res://constellation_figures_4k.png" id="2_m8u5f"]
+[ext_resource type="PackedScene" uid="uid://cem3guopl5kp8" path="res://player.tscn" id="4_is3ju"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3kph5"]
 shader = ExtResource("1_wt17y")
@@ -20,6 +21,16 @@ background_mode = 2
 sky = SubResource("Sky_wt17y")
 ambient_light_source = 3
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86vig"]
+albedo_color = Color(0.84263474, 3.5616756e-06, 4.813075e-07, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bi0sn"]
+material = SubResource("StandardMaterial3D_86vig")
+size = Vector2(1000, 1000)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bi0sn"]
+size = Vector3(10, 100, 10)
+
 [node name="Playground" type="Node3D" unique_id=1130976587]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1798939045]
@@ -29,6 +40,48 @@ environment = SubResource("Environment_m8u5f")
 transform = Transform3D(0.14043248, 0.85744333, -0.4950451, 2.7805946e-08, 0.49999994, 0.86602545, 0.99009025, -0.12161812, 0.070216194, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=556641241]
-transform = Transform3D(-0.27106506, 0, 0.962561, 0, 1, 0, -0.962561, 0, -0.27106506, 0, 0, 0)
-current = true
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1740864127]
+mesh = SubResource("PlaneMesh_bi0sn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=199775767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=893114209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 239.81303)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=805629094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 312.01572, 50, 239.81303)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=701159833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 312.01572, 50, -280.4779)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=468455028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -394.6288, 50, -280.4779)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=324168658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -394.6288, 50, 49.372314)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="." unique_id=512480922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -195.92154, 50, 49.372314)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="." unique_id=1706530026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -195.92154, 50, 324.68396)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="." unique_id=892951327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -385.90692, 50, 324.68396)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="." unique_id=729252750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.389343, 50, -123.01813)
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="Player" parent="." unique_id=75858320 instance=ExtResource("4_is3ju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 144.16289, 0)

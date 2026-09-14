@@ -11,6 +11,7 @@ ship_body = NodePath("../SpaceShip")
 metadata/_custom_type_script = "uid://dode0epak5ni5"
 
 [node name="SpaceShip" parent="." unique_id=407372911 instance=ExtResource("2_i3pqv")]
+mass = 300.0
 max_pitch_torque = 1000.0
 max_yaw_torque = 900.0
 max_roll_torque = 900.0

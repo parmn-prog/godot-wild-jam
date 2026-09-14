@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c4d7avi3jenbr"]
+
+[ext_resource type="Texture2D" uid="uid://cuiqbcfcxglty" path="res://pixelatedmoon.png" id="1_3tcni"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vrlf"]
+albedo_texture = ExtResource("1_3tcni")
+
+[sub_resource type="SphereMesh" id="SphereMesh_1vivr"]
+material = SubResource("StandardMaterial3D_8vrlf")
+radius = 3000.0
+height = 6000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=71164745]
+mesh = SubResource("SphereMesh_1vivr")

@@ -13,6 +13,10 @@ extends RigidBody3D
 @export var max_thrust: float = 1500.0
 @export var throttle_rate: float = 0.8
 
+@export var pitch_speed = 1.0
+@export var roll_speed = 1.0
+@export var yaw_speed = 1.0
+
 var stick: Vector2 = Vector2.ZERO
 var yaw_input: float = 0.0
 var throttle: float = 0.0
@@ -30,9 +34,9 @@ func _physics_process(delta: float) -> void:
 	_apply_thrust()
 
 func _apply_rotation_torque() -> void:
-	var pitch_torque: Vector3 = global_transform.basis.x * -stick.y * max_pitch_torque
-	var roll_torque: Vector3 = -global_transform.basis.z * stick.x * max_roll_torque
-	var yaw_torque: Vector3 = global_transform.basis.y * yaw_input * max_yaw_torque
+	var pitch_torque: Vector3 = global_transform.basis.x * -stick.y * max_pitch_torque * pitch_speed
+	var roll_torque: Vector3 = -global_transform.basis.z * stick.x * max_roll_torque * roll_speed
+	var yaw_torque: Vector3 = global_transform.basis.y * yaw_input * max_yaw_torque * yaw_speed
 	
 	apply_torque(pitch_torque + yaw_torque + roll_torque)
 

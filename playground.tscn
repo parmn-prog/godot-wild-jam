@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://yu6jb36coesw" path="res://skyshader.gdshader" id="1_wt17y"]
 [ext_resource type="Texture2D" uid="uid://dmf736xqp1dwq" path="res://constellation_figures_4k.png" id="2_m8u5f"]
 [ext_resource type="PackedScene" uid="uid://cem3guopl5kp8" path="res://player.tscn" id="4_is3ju"]
+[ext_resource type="PackedScene" uid="uid://c4d7avi3jenbr" path="res://moon.tscn" id="5_o00ia"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3kph5"]
 shader = ExtResource("1_wt17y")
@@ -85,3 +86,6 @@ mesh = SubResource("BoxMesh_bi0sn")
 
 [node name="Player" parent="." unique_id=75858320 instance=ExtResource("4_is3ju")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 144.16289, 0)
+
+[node name="MeshInstance3D12" parent="." unique_id=71164745 instance=ExtResource("5_o00ia")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3930.3481, 569, 149)

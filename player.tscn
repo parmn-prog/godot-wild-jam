@@ -1,22 +1,13 @@
 [gd_scene format=3 uid="uid://cem3guopl5kp8"]
 
+[ext_resource type="Script" uid="uid://dgwtqy6sxtk4j" path="res://Player/player.gd" id="1_i3pqv"]
 [ext_resource type="Script" uid="uid://dode0epak5ni5" path="res://Player/player_controller_component.gd" id="1_onrkg"]
-[ext_resource type="PackedScene" uid="uid://cr7stkbrtvp5t" path="res://ShipPhysics/space_ship.tscn" id="2_i3pqv"]
 
 [node name="Player" type="Node3D" unique_id=1492549579]
+script = ExtResource("1_i3pqv")
 
 [node name="PlayerInputComponent" type="Node" parent="." unique_id=1498176060 node_paths=PackedStringArray("ship_body")]
 script = ExtResource("1_onrkg")
-ship_body = NodePath("../SpaceShip")
+ship_body = NodePath("")
 invert_control = true
 metadata/_custom_type_script = "uid://dode0epak5ni5"
-
-[node name="SpaceShip" parent="." unique_id=407372911 instance=ExtResource("2_i3pqv")]
-mass = 350.0
-max_pitch_torque = 100.0
-max_yaw_torque = 80.0
-max_roll_torque = 80.0
-max_thrust = 4000.0
-pitch_speed = 10.0
-roll_speed = 10.0
-yaw_speed = 10.0

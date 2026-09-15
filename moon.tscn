@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://c4d7avi3jenbr"]
 
-[ext_resource type="Texture2D" uid="uid://cuiqbcfcxglty" path="res://pixelatedmoon.png" id="1_3tcni"]
+[ext_resource type="Texture2D" uid="uid://bkt1bilaep8lm" path="res://Assets/lroc_color_16bit_srgb_4k.png" id="1_rjvio"]
+[ext_resource type="Texture2D" uid="uid://beckfxkkrjiod" path="res://Assets/MoonNormalMapReal.png" id="2_rjvio"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vrlf"]
-albedo_texture = ExtResource("1_3tcni")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibuxt"]
+albedo_texture = ExtResource("1_rjvio")
+normal_enabled = true
+normal_texture = ExtResource("2_rjvio")
 
 [sub_resource type="SphereMesh" id="SphereMesh_1vivr"]
-material = SubResource("StandardMaterial3D_8vrlf")
+material = SubResource("StandardMaterial3D_ibuxt")
 radius = 3000.0
 height = 6000.0
 

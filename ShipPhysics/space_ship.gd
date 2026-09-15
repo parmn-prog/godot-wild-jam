@@ -21,6 +21,7 @@ var stick: Vector2 = Vector2.ZERO
 var yaw_input: float = 0.0
 var throttle: float = 0.0
 var thrust_input: float
+
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	linear_damp = 0.0
@@ -32,6 +33,8 @@ func _physics_process(delta: float) -> void:
 	_apply_stick_return(delta)
 	_apply_throttle(delta)
 	_apply_thrust()
+	$Sunsystem.rotation = -self.global_rotation
+	$Sunsystem.rotation_degrees.x -= 30.0
 
 func _apply_rotation_torque() -> void:
 	var pitch_torque: Vector3 = global_transform.basis.x * -stick.y * max_pitch_torque * pitch_speed

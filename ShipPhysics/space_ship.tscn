@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cr7stkbrtvp5t"]
 
 [ext_resource type="Script" uid="uid://du601baws8x5q" path="res://ShipPhysics/space_ship.gd" id="1_trq8t"]
+[ext_resource type="ArrayMesh" uid="uid://ct4p2md1egbkc" path="res://models/sunsystem.obj" id="2_wx5lw"]
+[ext_resource type="Material" uid="uid://bqkwo0nbecrnj" path="res://models/unshaded_green.tres" id="3_pytwa"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bi0sn"]
 friction = 0.0
@@ -53,3 +55,9 @@ shape = SubResource("ConvexPolygonShape3D_wx5lw")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1152179840]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.0048485)
+
+[node name="Sunsystem" type="MeshInstance3D" parent="." unique_id=1871231554]
+transform = Transform3D(0.11265854, 0, 0, 0, 0.097565144, 0.056329265, 0, -0.056329265, 0.097565144, 0, -0.29717252, -5.523869)
+mesh = ExtResource("2_wx5lw")
+surface_material_override/0 = ExtResource("3_pytwa")
+surface_material_override/1 = ExtResource("3_pytwa")

@@ -1,9 +1,6 @@
-[gd_scene format=3 uid="uid://cr7stkbrtvp5t"]
+[gd_scene format=3 uid="uid://bndmg63f4v6k8"]
 
-[ext_resource type="Script" uid="uid://du601baws8x5q" path="res://ShipPhysics/space_ship.gd" id="1_trq8t"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bi0sn"]
-friction = 0.0
+[ext_resource type="Script" uid="uid://dv2udtu665cc7" path="res://ShipPhysics/space_ship_direct.gd" id="1_7c3ew"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_bi0sn"]
 size = Vector3(2, 1, 10)
@@ -20,14 +17,8 @@ points = PackedVector3Array(-2.5, -0.5, -1, -2.5, 0.5, -1, 2.5, -0.5, -1, -2.5, 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wx5lw"]
 points = PackedVector3Array(-2.5, -0.5, -1, -2.5, 0.5, -1, 2.5, -0.5, -1, -2.5, -0.5, 1, -2.5, 0.5, 1, 2.5, 0.5, -1, 2.5, -0.5, 1, 2.5, 0.5, 1)
 
-[node name="SpaceShip" type="RigidBody3D" unique_id=407372911]
-mass = 1000.0
-physics_material_override = SubResource("PhysicsMaterial_bi0sn")
-gravity_scale = 0.0
-script = ExtResource("1_trq8t")
-max_pitch_torque = 300.0
-max_yaw_torque = 200.0
-max_roll_torque = 200.0
+[node name="SpaceShipDirect" type="Node3D" unique_id=1802736265]
+script = ExtResource("1_7c3ew")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1540677697]
 mesh = SubResource("BoxMesh_bi0sn")

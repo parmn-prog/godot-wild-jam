@@ -85,7 +85,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.389343, 50, -123.01813)
 mesh = SubResource("BoxMesh_bi0sn")
 
 [node name="Player" parent="." unique_id=75858320 instance=ExtResource("4_is3ju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4000)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 362.4303, 0)
 
 [node name="MeshInstance3D12" parent="." unique_id=71164745 instance=ExtResource("5_o00ia")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3930.3481, 569, 149)

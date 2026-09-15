@@ -22,7 +22,7 @@ var yaw_input: float = 0.0
 var throttle: float = 0.0
 var thrust_input: float
 func _ready() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 	linear_damp = 0.0
 	angular_damp = 0.0
 

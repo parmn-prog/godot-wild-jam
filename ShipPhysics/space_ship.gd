@@ -12,7 +12,7 @@ extends RigidBody3D
 @export_group("Thrust")
 @export var max_thrust: float = 1500.0
 @export var throttle_rate: float = 0.8
-
+@export_group("Axes rotation speeds")
 @export var pitch_speed = 1.0
 @export var roll_speed = 1.0
 @export var yaw_speed = 1.0
@@ -33,6 +33,8 @@ func _physics_process(delta: float) -> void:
 	_apply_stick_return(delta)
 	_apply_throttle(delta)
 	_apply_thrust()
+	$Sunsystem.rotation = -self.global_rotation
+	$Sunsystem.rotation_degrees.x -= 30.0
 
 func _apply_rotation_torque() -> void:
 	var pitch_torque: Vector3 = global_transform.basis.x * -stick.y * max_pitch_torque * pitch_speed

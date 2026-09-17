@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://rr64cbtdcaik"]
+
+[ext_resource type="Texture2D" uid="uid://cghf4oslldfnh" path="res://Assets/reticle.png" id="1_msf7v"]
+[ext_resource type="Texture2D" uid="uid://b5yd3jsn87mxv" path="res://Assets/wheel3.png" id="2_f2sdf"]
+[ext_resource type="Texture2D" uid="uid://bjlhehr1je5jd" path="res://Assets/wheel1.png" id="3_po8uj"]
+[ext_resource type="Texture2D" uid="uid://c02s8a5ipffim" path="res://Assets/ammo_bar.png" id="4_ypu5p"]
+
+[node name="gui" type="Control" unique_id=130447791]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Reticle" type="Sprite2D" parent="." unique_id=2042007671]
+position = Vector2(960, 540)
+scale = Vector2(0.22158957, 0.22158957)
+texture = ExtResource("1_msf7v")
+
+[node name="left_wheel" type="TextureProgressBar" parent="." unique_id=1828178272]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -720.0
+offset_top = -680.0
+offset_right = -208.0
+offset_bottom = -168.0
+grow_horizontal = 0
+grow_vertical = 0
+step = 0.1
+value = 66.2
+fill_mode = 5
+texture_under = ExtResource("2_f2sdf")
+texture_progress = ExtResource("3_po8uj")
+tint_under = Color(0.39215687, 1, 0.39215687, 1)
+tint_progress = Color(0.39215687, 1, 0.39215687, 1)
+
+[node name="right_wheel" type="TextureProgressBar" parent="." unique_id=2069755539]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 680.0
+offset_top = -680.0
+offset_right = 1192.0
+offset_bottom = -168.0
+grow_vertical = 0
+scale = Vector2(-1, 1)
+step = 0.1
+value = 66.2
+fill_mode = 5
+texture_under = ExtResource("2_f2sdf")
+texture_progress = ExtResource("3_po8uj")
+tint_under = Color(0.39215687, 1, 0.39215687, 1)
+tint_progress = Color(0.39215687, 1, 0.39215687, 1)
+
+[node name="ammo" type="TextureProgressBar" parent="." unique_id=2117489326]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -114.0
+offset_right = 124.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.1
+value = 52.5
+fill_mode = 5
+texture_progress = ExtResource("4_ypu5p")
+tint_under = Color(0.39215687, 1, 0.39215687, 1)
+tint_progress = Color(0.39215687, 1, 0.39215687, 1)

@@ -14,6 +14,7 @@ func _ready() -> void:
 			camera.position.z = -5
 			camera.current = true
 			player_input_component.ship_body = ship
+
 			
 		GameManager.Ship.Physics:
 			var ship: ShipPhysicsBody = SPACE_SHIP.instantiate()

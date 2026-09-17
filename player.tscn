@@ -6,8 +6,7 @@
 [node name="Player" type="Node3D" unique_id=1492549579]
 script = ExtResource("1_i3pqv")
 
-[node name="PlayerInputComponent" type="Node" parent="." unique_id=1498176060 node_paths=PackedStringArray("ship_body")]
+[node name="PlayerInputComponent" type="Node" parent="." unique_id=1498176060]
 script = ExtResource("1_onrkg")
-ship_body = NodePath("")
 invert_control = true
 metadata/_custom_type_script = "uid://dode0epak5ni5"

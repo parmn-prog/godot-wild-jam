@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bndmg63f4v6k8"]
+
+[ext_resource type="Script" uid="uid://dv2udtu665cc7" path="res://ShipPhysics/space_ship_direct.gd" id="1_7c3ew"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bi0sn"]
+size = Vector3(2, 1, 10)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_trq8t"]
+points = PackedVector3Array(1, 0.5, 5, 1, -0.5, 5, 1, 0.5, -5, -1, 0.5, 5, -1, -0.5, 5, 1, -0.5, -5, -1, 0.5, -5, -1, -0.5, -5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_86vig"]
+size = Vector3(5, 1, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3ttyw"]
+points = PackedVector3Array(-2.5, -0.5, -1, -2.5, 0.5, -1, 2.5, -0.5, -1, -2.5, -0.5, 1, -2.5, 0.5, 1, 2.5, 0.5, -1, 2.5, -0.5, 1, 2.5, 0.5, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wx5lw"]
+points = PackedVector3Array(-2.5, -0.5, -1, -2.5, 0.5, -1, 2.5, -0.5, -1, -2.5, -0.5, 1, -2.5, 0.5, 1, 2.5, 0.5, -1, 2.5, -0.5, 1, 2.5, 0.5, 1)
+
+[node name="SpaceShipDirect" type="Node3D" unique_id=1802736265]
+script = ExtResource("1_7c3ew")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1540677697]
+mesh = SubResource("BoxMesh_bi0sn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=916027714]
+shape = SubResource("ConvexPolygonShape3D_trq8t")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1601210845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -2)
+mesh = SubResource("BoxMesh_86vig")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1628842684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -2)
+shape = SubResource("ConvexPolygonShape3D_3ttyw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=745703077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -2)
+mesh = SubResource("BoxMesh_86vig")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=788409959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -2)
+shape = SubResource("ConvexPolygonShape3D_wx5lw")

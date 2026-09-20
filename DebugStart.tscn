@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cgmybq440qmwj"]
+
+[ext_resource type="Script" uid="uid://bxdwm1lhqy5lg" path="res://debug_start.gd" id="1_4a3gy"]
+
+[node name="Start" type="Control" unique_id=179625823]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4a3gy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1088775737]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="direct" type="Button" parent="VBoxContainer" unique_id=683810659]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 128
+text = "Direct Ship"
+
+[node name="physics" type="Button" parent="VBoxContainer" unique_id=60272219]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 128
+text = "Physics Ship"
+
+[connection signal="pressed" from="VBoxContainer/direct" to="." method="_on_direct_pressed"]
+[connection signal="pressed" from="VBoxContainer/physics" to="." method="_on_physics_pressed"]

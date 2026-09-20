@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6a3odh1nxd32"]
+
+[ext_resource type="ArrayMesh" uid="uid://ct4p2md1egbkc" path="res://models/sunsystem.obj" id="1_y4034"]
+[ext_resource type="Material" uid="uid://bqkwo0nbecrnj" path="res://models/unshaded_green.tres" id="2_rothe"]
+
+[node name="Sunsystem" type="MeshInstance3D" unique_id=839488159]
+transform = Transform3D(0.11265854, 0, 0, 0, 0.097565144, 0.056329265, 0, -0.056329265, 0.097565144, 0, 0, 0)
+mesh = ExtResource("1_y4034")
+surface_material_override/0 = ExtResource("2_rothe")
+surface_material_override/1 = ExtResource("2_rothe")
